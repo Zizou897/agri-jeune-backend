@@ -1,0 +1,11 @@
+[Unit]
+Description=Relance le programme Python3
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /path/to/mon_programme.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

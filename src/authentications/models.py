@@ -32,7 +32,7 @@ class User(AbstractUser):
     )
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    photo = models.FileField(
+    photo = models.ImageField( 
         upload_to = USER_IMAGE_PATH, 
         verbose_name = 'photo de profil',
         blank = True,

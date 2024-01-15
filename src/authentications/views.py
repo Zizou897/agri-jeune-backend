@@ -42,7 +42,12 @@ class SignUpView(APIView):
                         user.is_active = True
                     user.set_password(password)
                     user.save()
-                    return Response(serializer.data, status=status.HTTP_201_CREATED)
+                    data = {
+                        "code": 1,
+                        "status": status.HTTP_201_CREATED,
+                        "user": serializer.data
+                    }
+                    return Response(data, status=status.HTTP_201_CREATED)
                 else:
                     return Response({'error': 'Les mots de passe ne correspondent pas.'}, status=status.HTTP_400_BAD_REQUEST)
             return Response({'error': 'Le profil doit etre un client ou un agripreneur/commerçant.'}, status=status.HTTP_400_BAD_REQUEST)
