@@ -1,2 +1,5 @@
 USER_IMAGE_PATH = "uploads/user_images"
 ENTERPRISE_IMAGE_PATH = "uploads/enterprise_logo"
+CATEGORY_IMAGE_PATH = "uploads/product_categories"
+PRODUCT_IMAGE_PATH = "uploads/product_images"
+PAYMENT_METHOD_IMAGE_PATH = "uploads/payment_method_images"

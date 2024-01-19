@@ -41,7 +41,9 @@ INSTALLED_APPS = [
 
     # App created
     'authentications',
+    'settings',
     'account', 
+    'advert',
 
     # App installed
     'django_filters',
@@ -173,6 +175,12 @@ USE_I18N = True
 USE_TZ = True
 
 
+# DJANGO CITIES LIGHT
+CITIES_LIGHT_TRANSLATION_LANGUAGES = ["fr"]
+CITIES_CITY_MODEL = "cities_light.City"
+CITIES_COUNTRY_MODEL = "cities_light.Country"
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -180,9 +188,12 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = [BASE_DIR /'static']
+
+STATIC_ROOT = BASE_DIR / 'static_cdn'
+
+MEDIA_ROOT = BASE_DIR / 'media_cdn'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

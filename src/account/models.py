@@ -37,8 +37,8 @@ class Store(models.Model):
     )
 
     class Meta:
-        verbose_name = "Magasin"
-        verbose_name_plural = "Magasins"
+        verbose_name = "Boutique"
+        verbose_name_plural = "Boutiques"
 
     def __str__(self):
         return self.name
